@@ -1,0 +1,10 @@
+## Interface: 100205
+## Title: KSH Portals
+## Author: https://github.com/worstprgr
+## Version: 1.0
+## Notes: Allows to use KSH portals with a chat command
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+portals.lua
+KSHPortals.lua
