@@ -6,6 +6,9 @@ This tool allows you to invoke the teleports from the chat, via a tiny command:
 
 `/tp fh` -> which teleports you to Freehold.  
 
+After the command, a button shows up, under the cursor, where you have to 
+confirm the spell. (This approach is due to Blizzards API restrictions)  
+
 
 ### Screenshots
 Using "/tp" or "/tp help"  
@@ -22,7 +25,7 @@ using two different spell id's. And respecting two different id's for the same
 dungeon, requires some bigger refactoring of the code. This might be change in 
 the future.
 
-If you really need a specific teleport, I refer to the [Developer Section](#Developer Section).  
+If you really need a specific teleport, I refer to the -Developer Section.  
 
 
 ## Limitations
@@ -32,7 +35,7 @@ For that reason, a button will appear under your mouse cursor, where you have to
 Any mouse click outside this button, will cancel the spell command.  
 
 ### Screenshots
-Example confirmation buttons (DHT, Dawn, Underrot)  
+Example confirmation buttons (Dawn, Underrot)  
 ![Dawn](screenshots/dawn_button.jpeg)  ![Underrot](screenshots/underrot_button.jpeg)
 
 
@@ -57,16 +60,16 @@ Available Portals
 
 # Developer Section
 ## Adding a new portal
-If you want to add a new teleport or portal, you can modify the `portals.lua`file.  
-There are two tables: `NS.portals` and `NS.portal_labels`. If you're modify one table, you have to also adapt the second one.  
+If you want to add a new teleport or portal, you can modify the `portals.lua` file.  
+There are multiple tables, named by the corresponding WoW addon, where the dungeon is located.  
 
-### `NS.portals`
+If you want to add a new addon, also mention it, in the table `NS.portals_order` - which acts 
+as an index, to keep the correct order. (Just LUA things)  
+
+### `NS.portals_<addon>`
 **Key:** abbreviation of the spell  
 **Value:** SpellID  
 
-### `NS.portal_labels`
-**Key:** abbreviation of the spell  
-**Value:** Name of the dungeon  
 
 ## Changing the slash command
 If the slash command `/tp` is conflicting with a addon, you can change it in `KSHPortals.lua`: `SLASH_KSHPORTALS1 = `  
