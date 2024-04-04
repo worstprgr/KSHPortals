@@ -32,8 +32,8 @@ For that reason, a button will appear under your mouse cursor, where you have to
 Any mouse click outside this button, will cancel the spell command.  
 
 ### Screenshots
-Example confirmation buttons (DHT, Dawn, Underrot)
-![DHT](screenshots/dht_button.jpeg)  ![Dawn](screenshots/dawn_button.jpeg)  ![Underrot]screenshots/underrot_button.jpeg)
+Example confirmation buttons (DHT, Dawn, Underrot)  
+![DHT](screenshots/dht_button.jpeg)  ![Dawn](screenshots/dawn_button.jpeg)  ![Underrot](screenshots/underrot_button.jpeg)
 
 
 ## Usage
